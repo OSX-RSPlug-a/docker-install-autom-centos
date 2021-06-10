@@ -1,7 +1,4 @@
 #!/bin/bash
-# Install docker in centos
-# Remove any old versions
-#sudo yum remove docker docker-common docker-selinux docker-engine
 
 # Install req packs
 sudo yum install -y yum-utils device-mapper-persistent-data lvm2
@@ -16,7 +13,6 @@ sudo yum install docker-ce docker-ce-cli containerd.io -y
 sudo systemctl start docker
 sudo systemctl enable docker
 
-# Post Installation Steps
 # Create Docker group
 sudo groupadd docker
 

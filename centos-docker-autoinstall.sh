@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install req packs
-sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+sudo yum install yum-utils device-mapper-persistent-data lvm2 -y
 
 # Config docker repo
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
@@ -18,6 +18,9 @@ sudo groupadd docker
 
 # Add user to the docker group
 sudo usermod -aG docker $USER
+
+# Install compose
+sudo yum install docker-compose -y
 
 echo "Installation Complete -- Logout and Log back"
 
